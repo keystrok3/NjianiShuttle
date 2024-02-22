@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 
 //Routes middleware
-app.use('/api/auth', require('./routes/user.js')); 
+app.use('/api/auth', require('./routes/auth.js')); 
 
 
 

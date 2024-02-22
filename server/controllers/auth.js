@@ -2,8 +2,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require("../models/user");
-const Destination = require('../models/destinations');
-const Car = require('../models/car');
 
 /**
  * Add new user to database
