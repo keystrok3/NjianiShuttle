@@ -65,8 +65,7 @@
 
 ### 4. Destinations
 - Table name: destination 
-- Self-referencing
-- Attributes: location_name, office_hours
+- Attributes: location_name
 
 ### 5. Routes
 - Table name: route

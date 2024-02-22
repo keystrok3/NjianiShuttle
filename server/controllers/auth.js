@@ -3,6 +3,10 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require("../models/user");
 
+const Destination = require('../models/destinations');
+const Car = require('../models/car');
+const ServiceRoutes = require('../models/service_routes');
+
 /**
  * Add new user to database
 */
