@@ -2,7 +2,8 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require("../models/user");
-
+const Destination = require('../models/destinations');
+const Car = require('../models/car');
 
 /**
  * Add new user to database
@@ -39,12 +40,10 @@ const login = async (req, res, next) => {
 
     try {
         const user_by_id = await User.findOne({ where: { email: email }}); 
-
         if(user_by_id === null) {
             return res.status(404).json({ success: false, message: "Wrong Credentials" });
         }
 
-        console.log('user hash: ', user_by_id.password)
         const check_password = await bcrypt.compare(password, user_by_id.password)
 
         if(!check_password) {

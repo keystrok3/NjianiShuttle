@@ -57,7 +57,7 @@
 
 ### 2. Cars
 - Table name: car
-- Attributes: car_id, car_registration, available (true/false)
+- Attributes: car_registration, current_station (from destinations), departure_time
 
 ### 3. Car Seats
 - Table name: car_seats
@@ -66,7 +66,7 @@
 ### 4. Destinations
 - Table name: destination 
 - Self-referencing
-- Attributes: location_name, destination_id, office_hours
+- Attributes: location_name, office_hours
 
 ### 5. Routes
 - Table name: route

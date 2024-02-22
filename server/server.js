@@ -1,6 +1,7 @@
 require('dotenv').config({ path: './.env' });
 const express = require('express');
 
+
 // Environment variables
 const PORT = process.env.PORT;
 
@@ -13,6 +14,8 @@ app.use(express.json());
 
 //Routes middleware
 app.use('/api/auth', require('./routes/user.js')); 
+
+
 
 
 

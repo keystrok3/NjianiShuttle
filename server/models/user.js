@@ -19,20 +19,24 @@ User.init({
 
     first_name: {
         type: DataTypes.STRING,
+        allowNull: false
     },
 
     last_name: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: false
     },
 
     email: {
         type: DataTypes.STRING,
         validate: {
             isEmail: true
-        }
+        },
+        allowNull: false
     },
     password: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: false
     },
     reset_password_token: {
         type: DataTypes.STRING
@@ -53,8 +57,8 @@ User.init({
 });
 
 User
-.sync({ force: true })
-.then(() => console.log('Created table `user`'))
+.sync()
+.then(() => console.log('\n\n Created table `user` \n\n'))
 .catch(console.log)
 
 module.exports = User;
